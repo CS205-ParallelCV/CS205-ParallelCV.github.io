@@ -164,7 +164,7 @@
           <div class="col-lg-4 col-md-6 d-md-flex align-items-md-stretch">
             <div class="count-box">
               <i class="bi bi-headset"></i>
-              <p><strong>UNet (deep learning)<br></strong>A popular deep neural network that has shown great performance in image segmentation. It is a U-shaped stack of convolutional layers that first extracts a large number of local features and then reduces to the image space. With a large number of trainable parameters, it is able to learn from annotated data and determine whether each pixel belongs to a nuclei or not.or not.</p> 
+              <p><strong>UNet (deep learning)<br></strong>A popular deep neural network that has shown great performance in image segmentation. It is a U-shaped stack of convolutional layers that up-samples a large number of local features and then concatenates with features maps in the reverse order while downsampling to the image space. Configured with a large number of trainable parameters, it is able to learn from annotated data through epochs of training and accurately determine whether each pixel belongs to a nucleus or not. With data augmentation techniques, this model learns well through only very few epochs.</p> 
             </div>
           </div>
 
@@ -554,7 +554,13 @@
 
           [4] X. Wei, Q. Yang, Y. Gong, N. Ahuja and M. Yang, "Superpixel Hierarchy," in IEEE Transactions on Image Processing, vol. 27, no. 10, pp. 4838-4849, Oct. 2018, doi: 10.1109/TIP.2018.2836300.<br><br>
 
-          [5] Richard J. Anderson and Heather Woll. 1991. "Wait-free parallel algorithms for the union-find problem," in Proceedings of the twenty-third annual ACM symposium on Theory of Computing (STOC '91). Association for Computing Machinery, New York, NY, USA, 370–380. doi:https://doi.org/10.1145/103418.103458</p>
+          [5] Richard J. Anderson and Heather Woll. 1991. "Wait-free parallel algorithms for the union-find problem," in Proceedings of the twenty-third annual ACM symposium on Theory of Computing (STOC '91). Association for Computing Machinery, New York, NY, USA, 370–380. doi:https://doi.org/10.1145/103418.103458<br><br>
+
+          [6] Win KY, Choomchuay S, Hamamoto K, Raveesunthornkiat M. Comparative Study on Automated Cell Nuclei Segmentation Methods for Cytology Pleural Effusion Images. J Healthc Eng. 2018;2018:9240389. Published 2018 Sep 12. doi:10.1155/2018/9240389<br><br>
+
+          [7] Long, F. Microscopy cell nuclei segmentation with enhanced U-Net. BMC Bioinformatics 21, 8 (2020). https://doi.org/10.1186/s12859-019-3332-1
+
+          </p>
         </div>
 
       </div>
