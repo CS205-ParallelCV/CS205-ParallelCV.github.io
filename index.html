@@ -246,13 +246,7 @@
 
         <div class="section-title">
           <h2>Otsu's Method</h2>
-          <UL>
-            <LI> Description of solution and comparison with existing work on the problem
-            <LI> Technical description of the parallel application, programming models, platform and infrastructure
-            <LI> Links to repository with source code, evaluation data sets and test cases (github link is provided, so maybe we will here explain files organization in the folder? What does each file do?)
-            <LI> Technical description of the software design, code baseline, dependencies, how to use the code, and system and environment needed to reproduce your tests (maybe include a reproducibility pdf, like instruction pdf in lab? )
-            <LI> Your web page should include screenshots of your software that demonstrate how it functions.
-          </UL>
+          
         </div>
 
       </div>
@@ -263,9 +257,29 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Boruvka Method</h2>
-          <p>see Otsu's method</p>
-        </div>
+          <h2>Boruvka’s Method</h2>
+          <p>
+
+            Image segmentation strives to partition a digital image into regions of pixels with similar properties. If we model an image as a graph, a simple and comparatively space-efficient variant of this is a grid graph, whereby each pixel is connected to its neighbors in the four, or eight cardinal directions. The graph is undirected because of symmetry. Then we can think about edge weight as the dissimilarity between two neighboring vertices. <br><br>
+
+          Borůvka's algorithm is a greedy algorithm for finding a minimum spanning tree in a graph, or a minimum spanning forest in the case of a graph that is not connected.
+          The algorithm begins by in the beginning treating every vertex as a one-vertex tree, for each tree, finding the minimum-weight edge from this tree to all the other vertices of the graph, and adding all of those edges to the forest (set of all trees). Then, it repeats the process of finding the minimum-weight edge from each tree constructed so far to a different tree, and adding all of those edges to the forest. Each repetition of this process reduces the number of trees, within each connected component of the graph, to at most half of this former value, so after logarithmically many repetitions the process finishes. When it is done, the set of edges it has added forms the minimum spanning tree, or forest if the graph is not connected.<br><br></p>
+      </div>
+      <div class="section-title">
+          <a type="button" class="btn btn-success" href="https://deepnote.com/@wenling28/CS205-7qFmjTTNSCqLnf_mWCHKHg">Boruvka's Method: Writeup</a>
+          <button type="button" class="btn btn-success">Boruvka's Method: User's Guide</button>
+          <br><br>
+          <h2>Boruvka Tech stack<br></h2>
+          <dl>
+          <dd>- Google Cloud C2-standard-30 instance</dd>
+          <dd>- Job Manager: Slurm
+          <dd>- Parallel Execution Model: Single Program-Multiple Data (SPMD)</dd>
+          <dd>- Type of Application: HPC</dd>
+          <dd>- MPI/OpenMP Hybrids systems</dd>
+          <dd>- Inter-node: MPI (distributed memory model), Data Parallelism</dd>
+          <dd>- Intra-node: OpenMP (shared memory model), Function Parallelism</dd>
+          </dl>
+      </div>
 
       </div>
     </section><!-- End Boruvka Section -->
@@ -276,7 +290,28 @@
 
         <div class="section-title">
           <h2>Unet</h2>
-          <p>see Otsu's method</p>
+
+          <p>UNet is a popular deep neural network that has shown great performance in image segmentation. It is a U-shaped stack of convolutional layers that up-samples a large number of local features and then concatenates with feature maps in the reverse order while downsampling to the image space. Configured with a large number of trainable parameters, it is able to learn from annotated data through epochs of training and accurately determine whether each pixel belongs to a nucleus or not. With data augmentation techniques, this model learns well through only very few epochs.<br><br><br></p>
+
+          <div class="row no-gutters">
+
+          <div class="col-lg-7 col-md-6 d-md-flex align-items-md-stretch" >
+              <img src="https://lh5.googleusercontent.com/S8kuCw3YB7zCSKsQGwHH5qLjzGprOzS_kDk-cwM6TGQSD7CCj8u_WxCq5GY4GMgJHtwoCR8zU9US9XS3YFbZfNmUCSkRh8ohmADntnoE"></img>
+          </div>
+
+          <div class="col-lg-5 col-md-6 d-md-flex align-items-md-stretch" >
+              <ul>
+              <li>Highly non-linear function mapping each pixel to 0 or 1</li>
+              <li>Huge amount of model  parameters
+                  <ul>
+                    <li>Total params: 1,941,105</li>
+                    <li>Trainable params: 1,941,105</li>
+                  </ul>
+              </li>
+              <li>Learns fast with data augmentation</li>
+              </ul></p>
+          </div>
+
         </div>
 
       </div>
@@ -423,25 +458,13 @@
 
         <div class="section-title">
           <h2>Features &amp; Challenges</h2>
-          <p>Description of advanced features like models/platforms not explained in class, advanced functions of modules, techniques to mitigate overheads, challenging parallelization or implementation aspects...<br>
-          Extra points may be earned for the use of advanced features like:
-
-          <UL>
-          <LI>Programming models not explained in class (CUDA for GPU programming...)
-          <LI>Infrastructures not used during the course (Google Compute, eXede supercomputers...)
-          <LI>Advanced functions of models explained in class (MPI I/O, complex collective communications in MPI, OpenMP NUMA extensions...)
-          <LI>Modules of platforms not explained in class (ML or Graph in Spark...)
-          <LI>Advanced techniques to mitigate overheads (overlap of communication and computation, optimized libraries...)
-          <LI>Customized system configurations (kernel/driver tuning...) to mitigate overheads
-          <LI>Challenging parallelization or implementation aspects
-          </UL></p>
         </div>
 
         <div class="row">
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
             <div class="icon"><i class="bi bi-google"></i></div>
             <h4 class="title">Google Cloud Platform</h4>
-            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+            <p class="description">We use </p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
             <div class="icon"><i class="bi bi-bezier2"></i></div>
@@ -456,7 +479,7 @@
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
             <div class="icon"><i class="bi bi-spellcheck"></i></div>
             <h4 class="title"><a href="">Python &amp; C++</a></h4>
-            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            <p class="description"></p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
             <div class="icon"><i class="bi bi-brightness-high"></i></div>
