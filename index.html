@@ -33,7 +33,10 @@
 <script type="text/javascript"
   src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <!-- =======================================================
   * Template Name: iPortfolio - v3.1.0
   * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
@@ -43,7 +46,7 @@
 </head>
 
 <body>
-
+  
   <!-- ======= Mobile nav toggle button ======= -->
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
@@ -196,73 +199,6 @@
 
       </div>
     </section><!-- End Facts Section -->
-
-    <!--  ======= Skills Section ======= 
-    <section id="skills" class="skills section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Skills</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row skills-content">
-
-          <div class="col-lg-6" data-aos="fade-up">
-
-            <div class="progress">
-              <span class="skill">HTML <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">CSS <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">JavaScript <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="progress">
-              <span class="skill">PHP <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">WordPress/CMS <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Photoshop <i class="val">55%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-    End Skills Section -->
 
     <!-- ======= Otsu Section ======= -->
     <section id="otsu" class="portfolio section-bg">
@@ -537,42 +473,134 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Features &amp; Challenges</h2>
+          <h2>Features</h2>
         </div>
 
         <div class="row">
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
             <div class="icon"><i class="bi bi-google"></i></div>
             <h4 class="title">Google Cloud Platform</h4>
-            <p class="description">We use </p>
+            <p class="description">We explore creating bucket, lanuching VM instance, installing packages,
+            lanuching cluster on GCP. We think GCP has more detailed documentations compared to 
+          AWS and we enjoy $300 free credits:)</p>
           </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon"><i class="bi bi-bezier2"></i></div>
-            <h4 class="title">Graph &amp; Memory</h4>
-            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-          </div>
+          
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon"><i class="bi bi-file-lock2-fill"></i></div>
+            <div class="icon"><i class="bi bi-chat-left-dots"></i></div>
             <h4 class="title">Slurm Cluster &amp; MPI</h4>
-            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+            <p class="description">As a cluster workload manager, Slurm provides a framework for starting, executing, and monitoring parallel job on the set of allocated compute nodes. It uses NFS for storage and works well with MPI.</p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
             <div class="icon"><i class="bi bi-spellcheck"></i></div>
             <h4 class="title"><a href="">Python &amp; C++</a></h4>
-            <p class="description"></p>
+            <p class="description">We leverage the strengths of both languages - we use Unet, a well-developed package in Python and also
+            low level language C++ to explore parallelism at more fine-grained level.</p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon"><i class="bi bi-brightness-high"></i></div>
+            <div class="icon"><i class="bi bi-clipboard-data"></i></div>
             <h4 class="title"><a href="">TensorBoard</a></h4>
             <p class="description">TensorBoard is a profiling tool that monitors tensorflow-based model training. It provides a very detailed breakdown of how much time is spent in each section as well as the model performance across epochs.</p>
           </div>
+
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class="bi bi-bezier2"></i></div>
+            <h4 class="title">Graph &amp; Memory</h4>
+            <p class="description">We are working with 256*256 images, which has 65536 pixels. Running MST algorithm on this connected graph with 65536 vertices needs careful design and consideration of how C++ allocates memory.</p>
+          </div>
+
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon"><i class="bi bi-calendar4-week"></i></div>
-            <h4 class="title"><a href="">Dependency &amp; no-lock algorithm</a></h4>
-            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+            <div class="icon"><i class="bi bi-file-lock2-fill"></i></div>
+            <h4 class="title"><a href="">Data Dependency &amp; lock-free algorithm</a></h4>
+            <p class="description">Union and find algorithm itself has great data dependence and thus is hard to parallelize. We read a paper using the "compare and swap" technique and implement it, which mitigates the problem and uses less locks. </p>
           </div>
         </div>
 
+        <div class="section-title">
+          <h2>Challenges</h2>
+
+          <div id="accordion">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Environment Configuration
+                    </button>
+                  </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="card-body">
+                    The first and foremost challenge was the difficulty in Environment configuration. We had to come up with multiple versions of environment configuration, compatible with C++, python, OpenCV, Keras, CMake, MPI, OpenMP, GPU, cluster with SLURM etc. This was a long and tedious process of trouble shooting, path finding, package digging, and we finally came up with detailed setup instructions for each of the different environment configurations. 
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Familiarizing with Google Cloud
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                  <div class="card-body">
+                    All four of the team members were completely new to Google Cloud, and we learned how to setup VM instance, SLURM and cluster on Google Cloudwithin the duration of this project. Setting up a cluster for C++ with OpenCV with 8 nodes also took a considerable amount of time to learn and test, during which we wrote our own .sh file for quick installation for the convenience of later users. With UNet, we even did comprehensive testing on both AWS and Google Cloud. 
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Otsu Parallelism Overhead
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                  <div class="card-body">
+                    After testing for performance using only algorithm (loop level) parallelism, we were a bit surprised to find that the initial speedup was only 0.5. However, upon analysis we found that this was due to the low intensity in computation which made the overhead large in comparison. This is also because the algorithm consisted of many small parallel subparts, instead of a big one, further exacerbating the overhead. However, after investigating data level parallelism, this actually became a lesson learned for later data parallelism.
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header" id="headingFour">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                      UNet python multithreading
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                  <div class="card-body">
+
+                    We spent a considerable amount of time trying to multithread in python with Unet, but the process was challenging due to the following reasons:<br>
+
+                    1. Keras is not thread-safe, so a built-in threading package in python cannot be applied,<br>
+                    2. Keras has a bottleneck in CPU usage due to its image_generator function for data 
+                    augmentation,<br>
+                    3. Multiple dependencies within the existing python packages.<br>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header" id="headingFive">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+                      UNet python multi-worker training
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                  <div class="card-body">
+                    We are highly constrained by GCP’s quota limit on GPU and vCPUs. We are not able to obtain enough resources for distributed training on multiple GPUs. Also, we are not able to test our implementation of the multi-worker training in Spark.
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
       </div>
     </section><!-- End Services Section -->
 
