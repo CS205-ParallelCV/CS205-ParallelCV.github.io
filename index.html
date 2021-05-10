@@ -246,8 +246,36 @@
 
         <div class="section-title">
           <h2>Otsu's Method</h2>
+          <p>Refer to the below graph for the major steps of the algorithm. <br><br></p>
+
+          <img src="assets/img/otsu.jpeg" class="img-fluid" alt="Responsive image"></img>
+
+          <p><br>At step 0, a smiley face image is given as input. 
           
+          At step 1, the algorithm goes over all pixels, and prepares a pixel intensity histogram (stored in an array). 
+
+          At step 2, based on such histogram statistics, the algorithm do an exhaustive search of the best threshold that minimizes the intra-class variance, defined as a weighted sum of variances of the two classes: w2(t) = w0(t)02(t) + w1(t)12(t). Weights w0(t) = i=0t-1p(i) and  w1= i=tLp(i) are the probabilities of the two classes separated by the threshold value of the tth bin in the histogram out of a total of L bins.<br><br>
+          </p>
         </div>
+
+        <div class="section-title">
+          <a type="button" class="btn btn-danger" href="">Otsu's Method: Writeup</a>
+          <button type="button" class="btn btn-danger">Otsu's Method: User's Guide</button>
+          <button type="button" class="btn btn-danger">Setting up a Slurm Cluster</button>
+          
+          <br><br>
+          <h2>Otsu Tech stack<br></h2>
+          <dl>
+          <dd>- Google Cloud C2-standard-30 instance</dd>
+          <dd>- Language: C++ implemented from scratch</dd>
+          <dd>- Job Manager: Slurm </dd>
+          <dd>- Parallel Execution Model: Single Program-Multiple Data (SPMD)</dd>
+          <dd>- Type of Application: HPC</dd>
+          <dd>- MPI/OpenMP Hybrids systems</dd>
+          <dd>- Inter-node: MPI (distributed memory model), Data Parallelism</dd>
+          <dd>- Intra-node: OpenMP (shared memory model), Data Parallelism</dd>
+          </dl>
+      </div>
 
       </div>
     </section><!-- End Otsu Section -->
@@ -268,11 +296,14 @@
       <div class="section-title">
           <a type="button" class="btn btn-success" href="https://deepnote.com/@wenling28/CS205-7qFmjTTNSCqLnf_mWCHKHg">Boruvka's Method: Writeup</a>
           <button type="button" class="btn btn-success">Boruvka's Method: User's Guide</button>
+          <button type="button" class="btn btn-success">Setting up a Slurm Cluster</button>
+          
           <br><br>
           <h2>Boruvka Tech stack<br></h2>
           <dl>
           <dd>- Google Cloud C2-standard-30 instance</dd>
-          <dd>- Job Manager: Slurm
+          <dd>- Language: C++ implemented from scratch</dd>
+          <dd>- Job Manager: Slurm </dd>
           <dd>- Parallel Execution Model: Single Program-Multiple Data (SPMD)</dd>
           <dd>- Type of Application: HPC</dd>
           <dd>- MPI/OpenMP Hybrids systems</dd>
@@ -296,7 +327,7 @@
           <div class="row no-gutters">
 
           <div class="col-lg-7 col-md-6 d-md-flex align-items-md-stretch" >
-              <img src="https://lh5.googleusercontent.com/S8kuCw3YB7zCSKsQGwHH5qLjzGprOzS_kDk-cwM6TGQSD7CCj8u_WxCq5GY4GMgJHtwoCR8zU9US9XS3YFbZfNmUCSkRh8ohmADntnoE"></img>
+              <img src="assets/img/unet.png" class="img-fluid" alt="Responsive image"></img>
           </div>
 
           <div class="col-lg-5 col-md-6 d-md-flex align-items-md-stretch" >
@@ -308,15 +339,35 @@
                     <li>Trainable params: 1,941,105</li>
                   </ul>
               </li>
-              <li>Learns fast with data augmentation</li>
-              </ul></p>
+              <li>Learns fast with data augmentation</li><p><br></p>
+              <a type="button" class="btn btn-primary" href="">Unet's Method: Writeup</a> 
+              <p><br></p>
+              <button type="button" class="btn btn-primary">Unet: User's Guide</button>
+              </ul>
+
           </div>
 
         </div>
 
+        <div class="section-title">
+          
+          <br><br>
+          <h2>Unet Tech stack<br></h2>
+          <dl>
+          <dd>- GPU accelerated computing</dd>
+             
+          <dd> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Single GPU of different types</dd>
+          <dd> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parallel data augmentation and training
+</dd>
+
+          <dd>- Language: Python</dd>
+          <dd>- Software: Keras + Tensorflow</dd>
+          <dd>- Platform: GCP & AWS </dd>
+          </dl>
+      </div>
+
       </div>
     </section><!-- End Unet Section -->
-
 
 
     <!-- ======= Portfolio Section ======= -->
@@ -325,16 +376,15 @@
 
         <div class="section-title">
           <h2>Results</h2>
-          <p>Plan to put segmentation images and some plots with analysis in-text here</p>
-        </div>
+          </div>
 
         <div class="row" data-aos="fade-up">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
+              <li data-filter=".filter-app">Otsu</li>
+              <li data-filter=".filter-card">Boruvka</li>
+              <li data-filter=".filter-web">Unet</li>
             </ul>
           </div>
         </div>
