@@ -459,7 +459,7 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-4 portfolio-item o">
+<!--           <div class="col-lg-3 col-md-4 portfolio-item o">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/o2_raw.png" class="img-fluid" alt="">
             </div>
@@ -469,7 +469,7 @@
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/o2.png" class="img-fluid" alt="">
             </div>
-          </div>
+          </div> -->
 
         <!-- </div> -->
 
@@ -513,17 +513,18 @@
           <h2>Discussion</h2>
           <br>
           <h4>1 Accuracy</h4>
-          
+          <br>
           <img src="https://github.com/CS205-ParallelCV/cs205-FinalProject/blob/main/imgs/method_outputs.png?raw=true" class="img-fluid"></img>
           <p>
-          We compare the output quality of the three methods. 
+          <br>We compare the output quality of the three methods. 
           Otsu’s method works for most cases but sometimes cannot distinguish between nuclei and background. 
           Boruvka’s algorithm generates zig-zag and artistic instance boundaries. 
-          UNet gives the most accurate results, but it takes much longer to train and test compared to the other two methods. 
+          UNet gives the most accurate results, but it takes much longer to train and test compared to the other two methods. <br><br>
           </p>
 
           <br>
           <h4>2 Speedup</h4>
+          <br>
           <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQ1mbvZJgAN_9swMQDbE0aMKwY2J-CX3tUlALWVcuefYauIH8Rlkp9LBKzFW8V-DEB3iHzjAAHs0lia/embed?start=true&loop=true&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
           <br>
         </div>
@@ -581,60 +582,40 @@
 
         <div class="section-title">
           <h2>Future work</h2>
-        <p>Final discussion about goals achieved, improvements suggested, lessons learnt, future work, interesting insights…</p>
         <div class="row">
           <div class="col-lg-6" data-aos="fade-up">
             <h3 class="resume-title">Otsu's Method</h3>
             <div class="resume-item pb-0">
-              <h4>balabala</h4>
-              <p><em>balabalabalabalbalabalabalbalabalabalabalabalba<br>
-                labalabalabalabalbalabalabalbalabalabalabalabalba<br>
-                labalabalabalabalbalabalabalbalabalabalabalabalba<br>
-                labalabalabalabalbalabalabalbalabalabalabalabalba
-              </em></p>
+              <h4>Split Huge Image</h4>
+              <p>In case we have a huge image, we may parallelize its 
+              segmentation by splitting it into smaller chunks for parallel processing.</p>
             </div>
 
             <h3 class="resume-title">Boruvka's Method</h3>
             <div class="resume-item pb-0">
               <h4>Feature Aggregation</h4>
-              <p><em>balabalabalabalbalabalabalbalabalabalabalabalba<br>
-                labalabalabalabalbalabalabalbalabalabalabalabalba<br>
-                labalabalabalabalbalabalabalbalabalabalabalabalba<br>
-                labalabalabalabalbalabalabalbalabalabalabalabalba
-              </em></p>
-            </div>
-
-            <div class="resume-item pb-0">
-              <h4>CUDA</h4>
-              <p><em>balabalabalabalbalabalabalbalabalabalabalabalba<br>
-                labalabalabalabalbalabalabalbalabalabalabalabalba<br>
-                labalabalabalabalbalabalabalbalabalabalabalabalba<br>
-                labalabalabalabalbalabalabalbalabalabalabalabalba
-              </em></p>
+              <p>When looking at some bad outputs produced by Boruvka, we notice that there are some wired vertical lines that should definitely not belong to the place it assigned. We deduct the reason of that happening is that we use fixed weight edges in our program. The weight of edge (between two components) always equals the weight of the edge in the original graph and the color difference between its two endpoints. This infomation is local and error prone! Imagine if we use the color difference between two supernode components to represent edge weight, we get more accurate estimate of color difference between two components and thus will probably get a better and more sensible result.
+              </p>
             </div>
 
           </div>
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <h3 class="resume-title">Unet</h3>
             <div class="resume-item">
-              <h4>balabalabalabalbalabalabalbala</h4>
-              <ul>
-                <li>balabalabalabalbalabalabalbala</li>
-                <li>balabalabalabalbalabalabalbala</li>
-                <li>balabalabalabalbalabalabalbala</li>
-              </ul>
+              <h4>Multi-GPU instance</h4>
+              <p>Currently, we are constrained to a single-instance GPU on Google Cloud due to its quota limit. If we are able to obtain more GPU instances, we hope to train the network on multi-GPU with the built-in methods by Keras for distributed model training.</p>
             </div>
 
-            <h3 class="resume-title">In General</h3>
             <div class="resume-item">
-              <h4>In General</h4>
-              <ul>
-                <li>balabalabalabalbalabalabalbala</li>
-                <li>balabalabalabalbalabalabalbala</li>
-                </li>
-              </ul>
+              <h4>Multi-worker Spark Cluster</h4>
+              <p>We attempted to use Elephas and PySpark for distributed training on a cluster of CPU workers, but perhaps due to the large number of parameters, we kept running into memory error on spark. We may further investigate the reason why it fails.</p>
             </div>
 
+            <div class="resume-item">
+              <h4>Data parallelism during inference step</h4>
+              <p>In prediction when there is a large number of test images, we should explore data
+              parallelism such that a pretrained model can be applied to multiple test images concurrently to segment the nuclei and efficiently saves the results.</p>
+            </div>
           </div>
         </div>
 
