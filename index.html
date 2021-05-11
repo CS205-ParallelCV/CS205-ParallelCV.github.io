@@ -577,6 +577,23 @@
               </div>
 
               <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Beruvka Parallelism Race Condition
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                  <div class="card-body">
+                    As we tried to avoid using locks that serialize the program,
+                    we used compare and swap trick. However, at development stage, running the program gives a lot of error messges related to data race: double free() memory, segmentation fault. It is really hard to debug these errors, as behavior of data race is undeterminisitic. We need to figure out 
+                    what part of codes are executed by different threads, in what order, and what will happen.
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
                 <div class="card-header" id="headingFour">
                   <h5 class="mb-0">
                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
