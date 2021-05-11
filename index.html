@@ -220,7 +220,7 @@
           
           At step 1, the algorithm goes over all pixels, and prepares a pixel intensity histogram (stored in an array). 
 
-          At step 2, based on such histogram statistics, the algorithm do an exhaustive search of the best threshold that minimizes the intra-class variance, defined as a weighted sum of variances of the two classes: ${\sigma_{w}}^{2}(t) = w_0(t){\sigma_{0}}^2(t) + w_1(t){\sigma_{1}}^2(t) $. Weights $w_1(t) = \sum_{i=0}^{t-1} p(i)$ and  $w_0(t) = \sum_{t}^{L} p(i)$ are the probabilities of the two classes separated by the threshold value of the tth bin in the histogram out of a total of $L$ bins.<br><br>
+          At step 2, based on such histogram statistics, the algorithm do an exhaustive search of the best threshold that minimizes the intra-class variance, defined as a weighted sum of variances of the two classes: \({\sigma_{w}}^{2}(t) = w_0(t){\sigma_{0}}^2(t) + w_1(t){\sigma_{1}}^2(t) \). Weights \(w_1(t) = \sum_{i=0}^{t-1} p(i)\) and  \(w_0(t) = \sum_{t}^{L} p(i)\) are the probabilities of the two classes separated by the threshold value of the tth bin in the histogram out of a total of \(L\) bins.<br><br>
           </p>
         </div>
 
